@@ -1,5 +1,6 @@
 //EXTENSÕES
 import Foundation
+import CoreGraphics
 
 let name = "Eric Alves Brito"
 
@@ -46,9 +47,7 @@ extension String {
     }
 }
 
-
 print(name.vowels)
-
 print(name.initials())
 
 
@@ -61,3 +60,13 @@ class Account {
         self.number = number
     }
 }
+
+
+extension Account {
+    convenience init(number: String, balance: Double) {
+        self.init(number : number)
+        self.balance = balance
+    }
+}
+
+let account = Account(number: "237498237432894")
